@@ -5,10 +5,24 @@
 }
 
 :root {
+  --accent-color: #06ED86;
+
   --text-color: #FFFFFF;
-  --text-highlight-color: #FFFFFF;
+  --text-highlight-color: #06ED86;
   --text-accent: #06ED86;
+  --text-line-height: 1.5;
+  --text-letter-spacing: 2px;
+
+  --footer-bg-color: #06ED86;
+  --footer-height: 500px;
+
+  --section-padding: 100px;
 }
+
+
+
+
+
 
 html {
   background-color: #000;
@@ -16,9 +30,16 @@ html {
   color: var(--text-color);
 }
 
+
+
+
+
+
 body {
   margin: 0;
   padding: 0;
+  margin-bottom: var(--footer-height);
+  background-color: #000;
 }
 
 a,
@@ -29,13 +50,24 @@ a:active {
   color: inherit;
 }
 
+
+
+
+
+
+
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
 }
 
+
+
+
+
 .landing {
-  padding: 100px;
+  padding: var(--section-padding);
 }
 
 .landing {
@@ -45,16 +77,21 @@ a:active {
 .landing__heading {
   font-size: 36px;
   font-weight: 100;
-  line-height: 1.5;
-  letter-spacing: 3px;
+  line-height: var(--text-line-height);
+  letter-spacing: var(--text-letter-spacing);
 }
 
 .landing__subheading {
   font-size: 55px;
-  line-height: 1.5;
+  line-height: var(--text-line-height);
   letter-spacing: 1.5px;
   max-width: 880px;
 }
+
+
+
+
+
 
 .social {
   padding: 0;
@@ -97,4 +134,88 @@ a:active {
 
 ::selection {
   background-color: var(--text-accent);
+}
+
+
+
+
+
+.values {
+  padding: calc(var(--section-padding) * 2) var(--section-padding);
+  text-align: center;
+}
+
+.values__heading {
+  font-family: "GT Pressura Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.values__paragraph {
+  font-size: 55px;
+  font-weight: 600;
+  max-width: 900px;
+  margin: 100px auto;
+  line-height: var(--text-line-height);
+  letter-spacing: var(--text-letter-spacing);
+}
+
+.values .icon {
+  width: 55px;
+  height: 55px;
+}
+
+.align-baseline {
+  position: relative;
+  bottom: -13px;
+}
+
+.icon--nodejs {
+  fill: var(--accent-color);
+}
+
+.text-highlight {
+  color: var(--text-highlight-color);
+}
+
+
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  background-color: var(--footer-bg-color);
+  min-height: var(--footer-height);
+}
+
+.footer__body {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--section-padding);
+}
+
+.footer__heading {
+  font-size: 55px;
+  max-width: 500px;
+  line-height: var(--text-line-height);
+  letter-spacing: var(--text-letter-spacing);
+}
+
+
+
+
+
+@media (max-width: 767px) {
+  :root {
+    --section-padding: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --section-padding: 20px;
+  }
 }
