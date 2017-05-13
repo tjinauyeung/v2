@@ -1,0 +1,100 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #FFFFFF;
+  --text-highlight-color: #FFFFFF;
+  --text-accent: #06ED86;
+}
+
+html {
+  background-color: #000;
+  font-family: "GT Pressura", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.landing {
+  padding: 100px;
+}
+
+.landing {
+  min-height: 100vh;
+}
+
+.landing__heading {
+  font-size: 36px;
+  font-weight: 100;
+  line-height: 1.5;
+  letter-spacing: 3px;
+}
+
+.landing__subheading {
+  font-size: 55px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  max-width: 880px;
+}
+
+.social {
+  padding: 0;
+  margin-top: 100px;
+  list-style: none;
+  max-width: 800px;
+}
+
+.social__link {
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 1px;
+
+  display: inline-block;
+  min-height: 80px;
+  max-width: 300px;
+  width: 100%;
+  user-select: none;
+}
+
+.social__link a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.social__link .icon {
+  fill: #FFFFFF;
+  width: 32px;
+  height: 32px;
+  margin-right: 35px;
+}
+
+.social__link a:hover {
+  color: var(--text-accent);
+}
+
+.social__link a:hover .icon {
+  fill: var(--text-accent);
+}
+
+::selection {
+  background-color: var(--text-accent);
+}
