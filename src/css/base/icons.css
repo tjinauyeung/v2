@@ -1,0 +1,7 @@
+.icon--nodejs {
+  fill: var(--accent-color);
+}
+
+.icon--reactjs {
+  animation: rotate linear 30s infinite;
+}

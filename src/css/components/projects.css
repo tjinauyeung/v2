@@ -1,0 +1,90 @@
+.projects {
+  padding: var(--section-padding);
+  position: relative;
+}
+
+.projects__heading {
+  font-family: "GT Pressura Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.project-list {
+  padding: 0;
+  list-style: none;
+  font-size: 55px;
+  max-width: 650px;
+  z-index: 999;
+}
+
+.project {
+  display: inline-block;
+  margin-right: 50px;
+  line-height: var(--text-line-height);
+  position: relative;
+  cursor: pointer;
+}
+
+.project:hover {
+  color: var(--accent-color);
+}
+
+.project:after {
+  content: "/";
+  color: #FFFFFF;
+  display: block;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  position: absolute;
+  right: -45px;
+  top: 0;
+}
+
+.project:last-child:after {
+  display: none;
+}
+
+.project__preview {
+  position: absolute;
+  right: 100px;
+  top: 50px;
+}
+
+.project__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 650px;
+  box-shadow: 0 0 100px 0 rgba(0,0,0,1);
+}
+
+.project__image {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.image-set {
+  position: relative;
+}
+
+.project__preview[data-active-project="ifac"] .project__image[data-project-name="ifac"],
+.project__preview[data-active-project="cabins"] .project__image[data-project-name="cabins"],
+.project__preview[data-active-project="follow"] .project__image[data-project-name="follow"],
+.project__preview[data-active-project="concrete"] .project__image[data-project-name="concrete"],
+.project__preview[data-active-project="bananas"] .project__image[data-project-name="bananas"],
+.project__preview[data-active-project="bearded-ben"] .project__image[data-project-name="bearded-ben"],
+.project__preview[data-active-project="particles"] .project__image[data-project-name="particles"] { 
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+}
+
+.project__preview[data-active-project="ifac"] + .project-list li[data-project-name="ifac"],
+.project__preview[data-active-project="cabins"] + .project-list li[data-project-name="cabins"],
+.project__preview[data-active-project="follow"] + .project-list li[data-project-name="follow"],
+.project__preview[data-active-project="concrete"] + .project-list li[data-project-name="concrete"],
+.project__preview[data-active-project="bananas"] + .project-list li[data-project-name="bananas"],
+.project__preview[data-active-project="bearded-ben"] + .project-list li[data-project-name="bearded-ben"],
+.project__preview[data-active-project="particles"] + .project-list li[data-project-name="particles"] {
+  color: var(--accent-color);
+}

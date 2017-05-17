@@ -1,0 +1,8 @@
+.text-highlight {
+  color: var(--text-highlight-color);
+}
+
+.align-baseline {
+  position: relative;
+  bottom: -13px;
+}

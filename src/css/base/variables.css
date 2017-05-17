@@ -1,0 +1,11 @@
+:root {
+  --accent-color: #06ED86;
+  --text-color: #FFFFFF;
+  --text-highlight-color: #06ED86;
+  --text-accent: #06ED86;
+  --text-line-height: 1.5;
+  --text-letter-spacing: 2px;
+  --footer-bg-color: #06ED86;
+  --footer-height: 500px;
+  --section-padding: 150px 100px;
+}

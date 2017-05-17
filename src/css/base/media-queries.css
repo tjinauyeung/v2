@@ -1,0 +1,11 @@
+@media (max-width: 767px) {
+  :root {
+    --section-padding: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --section-padding: 20px;
+  }
+}

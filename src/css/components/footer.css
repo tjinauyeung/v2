@@ -1,0 +1,22 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  background-color: var(--footer-bg-color);
+  min-height: var(--footer-height);
+}
+
+.footer__body {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+.footer__heading {
+  font-size: 55px;
+  max-width: 500px;
+  line-height: var(--text-line-height);
+  letter-spacing: var(--text-letter-spacing);
+}

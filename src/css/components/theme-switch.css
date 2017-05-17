@@ -1,0 +1,25 @@
+.theme-switch {
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.theme-switch__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.theme-switch__outline {
+  stroke: #FFF;
+  stroke-width: 5px;
+}
+
+.theme-switch__left-half {
+  fill: #FFF;
+}
+
+.theme-switch__right-half {
+  fill: #000;
+}
