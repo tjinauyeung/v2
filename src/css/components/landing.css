@@ -4,38 +4,40 @@
 
 .landing {
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .landing__heading {
-  font-size: 30px;
-  font-weight: 100;
-  margin: 90px 0;
+  font-size: 26px;
+  font-weight: var(--text-font-weight);
+  margin: 50px 0;
   line-height: var(--text-line-height);
   letter-spacing: var(--text-letter-spacing);
 }
 
 .landing__subheading {
-  font-size: 55px;
+  font-size: 40px;
   line-height: var(--text-line-height);
   letter-spacing: 1.5px;
-  max-width: 880px;
+  max-width: 700px;
 }
 
 .social {
   padding: 0;
-  margin-top: 100px;
+  margin-top: 70px;
   list-style: none;
-  max-width: 800px;
+  max-width: 600px;
 }
 
 .social__link {
-  font-weight: 100;
-  font-size: 20px;
+  font-weight: var(--text-font-weight);
+  font-size: 16px;
   letter-spacing: 2px;
 
   display: inline-block;
   min-height: 70px;
-  max-width: 270px;
+  max-width: 200px;
   width: 100%;
   user-select: none;
 }
@@ -47,16 +49,16 @@
 }
 
 .social__link .icon {
-  fill: #FFFFFF;
-  width: 28px;
-  height: 28px;
-  margin-right: 35px;
+  fill: var(--icon-color);
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
 }
 
 .social__link a:hover {
-  color: var(--text-accent);
+  color: var(--icon-hover-color);
 }
 
 .social__link a:hover .icon {
-  fill: var(--text-accent);
+  fill: var(--icon-hover-color);
 }

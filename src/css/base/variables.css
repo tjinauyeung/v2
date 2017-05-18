@@ -1,11 +1,36 @@
 :root {
+  --text-line-height: 1.5;
+  --text-letter-spacing: 2px;
+  --footer-height: 500px;
+  --section-padding: 150px 100px;
+}
+
+:root {
+  --body-bg-color: #1A1A1A;
   --accent-color: #06ED86;
   --text-color: #FFFFFF;
   --text-highlight-color: #06ED86;
   --text-accent: #06ED86;
-  --text-line-height: 1.5;
-  --text-letter-spacing: 2px;
+  --text-font-weight: 100;
+  --icon-color: #FFFFFF;
+  --icon-hover-color: #06ED86;
   --footer-bg-color: #06ED86;
-  --footer-height: 500px;
-  --section-padding: 150px 100px;
+  --footer-text-color: #FFFFFF;
+}
+
+.theme-inverted {
+  --accent-color: #06ED86;
+  --body-bg-color: #F2F2F2;
+  --text-color: #333;
+  --text-highlight-color: #06ED86;
+  --text-accent: #06ED86;
+  --text-font-weight: 400;
+  --icon-color: #333;
+  --icon-hover-color: #06ED86;
+  --footer-bg-color: #06ED86;
+  --footer-text-color: #FFFFFF;
+}
+
+body {
+  transition: background-color 150ms ease-in-out;
 }

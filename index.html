@@ -7,8 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="src/css/main.css">
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -18,17 +17,21 @@
       </p>
     <![endif]-->
     <div class="wrapper">
-      
-      <div class="theme-switch">
-        <svg class="theme-switch__icon" viewBox="-3 -3 40 40">
-          <g>
-            <path class="theme-switch__outline" d="M17,1c8.8,0,16,7.2,16,16s-7.2,16-16,16S1,25.8,1,17S8.2,1,17,1 M17,0C7.6,0,0,7.6,0,17s7.6,17,17,17s17-7.6,17-17
-              S26.4,0,17,0L17,0z"></path>
-          </g>
-          <path class="theme-switch__left-half" d="M17,34c9.4,0,17-7.6,17-17S26.4,0,17,0L17,34z"></path>
-          <path class="theme-switch__right-half" d="M17,34C7.6,34,0,26.4,0,17S7.6,0,17,0L17,34z"></path>
-        </svg>
-      </div>
+    <canvas id="canvas"></canvas>
+
+      <aside class="side-menu">
+        <div class="theme-switch">
+          <svg class="theme-switch__icon" viewBox="-5 -5 45 45">
+            <g>
+              <path class="theme-switch__outline" d="M17,1c8.8,0,16,7.2,16,16s-7.2,16-16,16S1,25.8,1,17S8.2,1,17,1 M17,0C7.6,0,0,7.6,0,17s7.6,17,17,17s17-7.6,17-17
+                S26.4,0,17,0L17,0z"></path>
+            </g>
+            <path class="theme-switch__left-half" d="M17,34c9.4,0,17-7.6,17-17S26.4,0,17,0L17,34z"></path>
+            <path class="theme-switch__right-half" d="M17,34C7.6,34,0,26.4,0,17S7.6,0,17,0L17,34z"></path>
+          </svg>
+        </div>
+        <audio id="sfx-switch" src="src/assets/sfx/sfx-switch.mp3" hidden></audio>
+      </aside>
 
       <section class="landing">
         <h1 class="landing__heading">
@@ -90,30 +93,30 @@
         </ul>
       </section>
 
-      <section class="projects">
-        <h2 class="projects__heading">
-          01 Projects
+      <section class="values">
+        <h2 class="values__heading">
+          03 Values
         </h2>
-        <div class="project__preview" data-active-project="ifac">
-          <div class="image-set">
-            <img class="project__image" data-project-name="ifac" src="assets/images/project-ifac.jpg">
-            <img class="project__image" data-project-name="cabins" src="assets/images/project-cabins.jp">
-            <img class="project__image" data-project-name="follow" src="assets/images/project-follow.jpg">
-            <img class="project__image" data-project-name="concrete" src="assets/images/project-concrete.jpg">
-            <img class="project__image" data-project-name="bananas" src="assets/images/project-bananas.jpg">
-            <img class="project__image" data-project-name="bearded-ben" src="assets/images/project-bearded-ben.jpg">
-            <img class="project__image" data-project-name="particles" src="assets/images/project-particles.jpg">
-          </div>
-        </div>
-        <ul class="project-list">
-          <li class="project" data-project-name="ifac">IFAC</li>
-          <li class="project" data-project-name="cabins">Cabins</li>
-          <li class="project" data-project-name="concrete">Concrete Architecture</li>
-          <li class="project" data-project-name="follow">Follow</li>
-          <li class="project" data-project-name="bananas">Bananas</li>
-          <li class="project" data-project-name="bearded-ben">Ben</li>
-          <li class="project" data-project-name="particles">Canvas Experiment</li>
-        </ul>
+        <p class="values__paragraph">
+          I love <span class="text-highlight">good design</span>. During my architecture studies I developed an interest in where technology meets design.
+        </p>
+        <p class="values__paragraph">
+          As a front end developer who is experienced with design as well as engineering I provide value being the bridge between good UX/UI and <span class="text-highlight">good software practises</span>.
+        </p>
+        <p class="values__paragraph">
+          Currently I’m mostly interested in 
+          <svg class="icon icon--reactjs align-baseline" viewBox="0 -2 45 50">
+            <circle fill="#53C1DE" cx="23.5" cy="22.5" r="3.5"></circle>
+            <ellipse fill="none" stroke="#53C1DE" stroke-width="3" transform="translate(23.500000, 22.500000) rotate(2.000000) translate(-23.500000, -22.500000) " cx="23.5" cy="22.5" rx="9.5" ry="21.5"></ellipse>
+            <ellipse fill="none" stroke="#53C1DE" stroke-width="3" transform="translate(23.500000, 22.500000) rotate(61.000000) translate(-23.500000, -22.500000) " cx="23.5" cy="22.5" rx="9.5" ry="21.5"></ellipse>
+            <ellipse fill="none" stroke="#53C1DE" stroke-width="3" transform="translate(23.500000, 22.500000) rotate(124.000000) translate(-23.500000, -22.500000) " cx="23.5" cy="22.5" rx="9.5" ry="21.5"></ellipse>
+          </svg>
+          React.js,
+          <svg class="icon icon--nodejs align-baseline" viewBox="0 1 42 50">
+            <path d="M24.4973743,5 C26.4272841,5 40.8797673,13.7027911 41.5341257,14.836173 C42.188484,15.9695549 42.2940093,33.192362 41.5341257,34.508519 C40.774242,35.8246761 25.9552356,44.344692 24.4973743,44.344692 C23.0395129,44.344692 8.10011137,35.6161456 7.46062288,34.508519 C6.82113439,33.4008925 6.87231662,15.8551493 7.46062288,14.836173 C8.04892914,13.8171967 22.5674644,5 24.4973743,5 Z"></path>
+          </svg>
+          Node.js and software architecture.
+        </p>
       </section>
 
       <section class="resume">
@@ -186,32 +189,6 @@
         </article>
       </section>
 
-      <section class="values">
-        <h2 class="values__heading">
-          03 Values
-        </h2>
-        <p class="values__paragraph">
-          I love <span class="text-highlight">good design</span>. During my architecture studies I developed an interest in where technology meets design.
-        </p>
-        <p class="values__paragraph">
-          As a front end developer who is experienced with design as well as engineering I provide value being the bridge between good UX/UI and <span class="text-highlight">good software practises</span>.
-        </p>
-        <p class="values__paragraph">
-          Currently I’m mostly interested in 
-          <svg class="icon icon--reactjs align-baseline" viewBox="0 -2 45 50">
-            <circle fill="#53C1DE" cx="23.5" cy="22.5" r="3.5"></circle>
-            <ellipse fill="none" stroke="#53C1DE" stroke-width="3" transform="translate(23.500000, 22.500000) rotate(2.000000) translate(-23.500000, -22.500000) " cx="23.5" cy="22.5" rx="9.5" ry="21.5"></ellipse>
-            <ellipse fill="none" stroke="#53C1DE" stroke-width="3" transform="translate(23.500000, 22.500000) rotate(61.000000) translate(-23.500000, -22.500000) " cx="23.5" cy="22.5" rx="9.5" ry="21.5"></ellipse>
-            <ellipse fill="none" stroke="#53C1DE" stroke-width="3" transform="translate(23.500000, 22.500000) rotate(124.000000) translate(-23.500000, -22.500000) " cx="23.5" cy="22.5" rx="9.5" ry="21.5"></ellipse>
-          </svg>
-          React.js,
-          <svg class="icon icon--nodejs align-baseline" viewBox="0 1 42 50">
-            <path d="M24.4973743,5 C26.4272841,5 40.8797673,13.7027911 41.5341257,14.836173 C42.188484,15.9695549 42.2940093,33.192362 41.5341257,34.508519 C40.774242,35.8246761 25.9552356,44.344692 24.4973743,44.344692 C23.0395129,44.344692 8.10011137,35.6161456 7.46062288,34.508519 C6.82113439,33.4008925 6.87231662,15.8551493 7.46062288,14.836173 C8.04892914,13.8171967 22.5674644,5 24.4973743,5 Z"></path>
-          </svg>
-          Node.js and software architecture.
-        </p>
-      </section>
-
       <section class="stack">
         <h2 class="stack__heading">
           05 Working experience stack
@@ -243,7 +220,7 @@
             React
           </li>
           <li>
-            <img class="icon icon--redux" src="assets/images/icon-redux.png"/>
+            <img class="icon icon--redux" src="src/assets/images/icon-redux.png"/>
             Redux
           </li>
           <li>
@@ -291,11 +268,11 @@
             Karma
           </li>
           <li>
-            <img class="icon icon--git" src="assets/images/icon-git.png"/>
+            <img class="icon icon--git" src="src/assets/images/icon-git.png"/>
             Git
           </li>
           <li>
-            <img class="icon icon--sass" src="assets/images/icon-sass.png"/>
+            <img class="icon icon--sass" src="src/assets/images/icon-sass.png"/>
             Sass
           </li>
         </ul>
@@ -305,14 +282,13 @@
     <footer class="footer">
       <section class="footer__body">
         <h2 class="footer__heading">
-          Want to work together? Ask me anything.
+          Want to work together? Ask me anything <span class="blink">_</span>
         </h2>
-        <p class="footnote">
-          Designed & developed by Tjin Au Yeung
-        </p>
       </section>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="src/js/components/theme-switch.js"></script>
+    <script src="src/js/components/key-controls.js"></script>
+    <script src="src/js/components/animation.js"></script>
   </body>
 </html>

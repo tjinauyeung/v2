@@ -1,0 +1,34 @@
+.key-controls {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+}
+
+.key {
+  fill: var(--body-bg-color);
+  filter: drop-shadow(0 2px 0 var(--text-color));
+  width: 47px;
+  height: 47px;
+  margin-right: 5px;
+}
+
+.key rect {
+  stroke: var(--text-color);
+  stroke-width: 1px;
+}
+
+.key text {
+  font-family: 'GT Pressura Mono';
+  font-weight: 100;
+  fill: var(--text-color);
+}
+
+.key path {
+  stroke: var(--text-color);
+  stroke-width: 1px;
+}
+
+.key.is-pressed {
+  transform: translate(0, 1px);
+  filter: none;
+}

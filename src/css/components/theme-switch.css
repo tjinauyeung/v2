@@ -1,25 +1,37 @@
 .theme-switch {
-  position: fixed;
+  position: absolute;
   top: 100px;
   right: 100px;
-  z-index: 9;
   cursor: pointer;
 }
 
 .theme-switch__icon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 .theme-switch__outline {
-  stroke: #FFF;
-  stroke-width: 5px;
+  stroke: var(--icon-color);
+  stroke-width: 10px;
 }
 
 .theme-switch__left-half {
-  fill: #FFF;
+  fill: var(--body-bg-color);
 }
 
 .theme-switch__right-half {
-  fill: #000;
+  fill: var(--icon-color);;
+}
+
+.theme-inverted .theme-switch__outline {
+  stroke: var(--icon-color);
+  stroke-width: 6px;
+}
+
+.theme-inverted .theme-switch__left-half {
+  fill: var(--body-bg-color);
+}
+
+.theme-inverted .theme-switch__right-half {
+  fill: var(--icon-color);
 }

@@ -1,0 +1,7 @@
+<svg fill="white" filter="drop-shadow(0 2 0 #000)">
+    <rect stroke="#000" stroke-width="2" x="1" y="1" width="47" height="45" rx="5" style="/* filter: drop-shadow(0 5px 0 #000); *//* box-shadow: 0 2px 0 #000; */"></rect>
+    <text id="J" font-family="GTPressuraMonoTrial-Regular, GT Pressura Mono Trial" font-size="17" font-weight="normal" letter-spacing="3.86363673" fill="#000">
+      <tspan x="19" y="28">J</tspan>
+    </text>
+    <path d="M18.5,35 L30.5,35" id="Line" stroke="#000" stroke-width="2" stroke-linecap="round"></path>
+  </svg>

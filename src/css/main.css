@@ -5,7 +5,9 @@
 @import 'base/utils.css';
 @import 'base/animations.css';
 @import 'base/media-queries.css';
+@import 'components/canvas.css';
 @import 'components/theme-switch.css';
+@import 'components/key-controls.css';
 @import 'components/landing.css';
 @import 'components/projects.css';
 @import 'components/resume.css';
