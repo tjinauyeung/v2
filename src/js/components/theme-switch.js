@@ -11,6 +11,8 @@
     sfx.play();
   }
 
+  sfx.volume = 0.5;
+
   themeSwitch.addEventListener('click', handleSwitch);
 
 })(window, document);
