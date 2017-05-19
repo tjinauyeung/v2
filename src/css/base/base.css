@@ -11,8 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  margin-bottom: var(--footer-height);
-  background-color: var(--body-bg-color);
+  overflow-x: hidden;
   color: var(--text-color);
   font-family: "GT Pressura", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
@@ -33,7 +32,12 @@ a:active {
   color: #FFFFFF;
 }
 
-.wrapper {
+.outer-wrapper {
+  background-color: var(--body-bg-color);
+  margin-bottom: var(--footer-height);
+}
+
+.inner-wrapper {
   max-width: 1180px;
   margin: 0 auto;
 }

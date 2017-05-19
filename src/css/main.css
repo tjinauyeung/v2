@@ -1,6 +1,7 @@
 @import 'vendor/normalize.css';
 @import 'base/variables.css';
 @import 'base/base.css';
+@import 'base/typography.css';
 @import 'base/icons.css';
 @import 'base/utils.css';
 @import 'base/animations.css';

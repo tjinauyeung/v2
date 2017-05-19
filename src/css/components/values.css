@@ -12,7 +12,7 @@
 .values__paragraph {
   font-size: 45px;
   font-weight: 600;
-  max-width: 880px;
+  max-width: 700px;
   margin: 100px auto;
   line-height: var(--text-line-height);
   letter-spacing: var(--text-letter-spacing);
