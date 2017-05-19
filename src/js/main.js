@@ -19,6 +19,10 @@
     themeSwitch.addEventListener('click', handleSwitch);
   }
 
-  app.initThemeSwitch();
+  app.init = function() {
+    initThemeSwitch();
+  }
+
+  app.init();
 
 })(window, document);
