@@ -5,8 +5,10 @@ const autoprefixer = require('autoprefixer');
 
 const css = fs.readFileSync("src/css/main.css", "utf8");
  
-postcss([autoprefixer])
-  .use(postcssImports())
+postcss([
+  autoprefixer(),
+  postcssImports()
+])
   .process(css, {
     from: "src/css/main.css"
   })
