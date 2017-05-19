@@ -1,8 +1,9 @@
 .theme-switch {
-  position: absolute;
-  top: 100px;
-  right: 100px;
+  position: fixed;
+  top: 50px;
+  right: 50px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .theme-switch__icon {
