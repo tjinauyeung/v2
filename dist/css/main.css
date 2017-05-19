@@ -422,10 +422,6 @@ template {
   --footer-bg-color: #06ED86;
   --footer-text-color: #FFFFFF; }
 
-body {
-  -webkit-transition: background-color 150ms ease-in-out;
-  transition: background-color 150ms ease-in-out; }
-
 *,
 *:before,
 *:after {
@@ -450,20 +446,18 @@ a:active {
   color: inherit; }
 
 ::-moz-selection {
-  background-color: var(--text-accent); }
-
-::selection {
-  background-color: var(--text-accent); }
-
-.theme-inverted ::-moz-selection {
+  background-color: var(--text-accent);
   color: #FFFFFF; }
 
-.theme-inverted ::selection {
+::selection {
+  background-color: var(--text-accent);
   color: #FFFFFF; }
 
 .outer-wrapper {
   background-color: var(--body-bg-color);
-  margin-bottom: var(--footer-height); }
+  margin-bottom: var(--footer-height);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out; }
 
 .inner-wrapper {
   max-width: 1180px;
@@ -476,12 +470,6 @@ a:active {
 
 .column--left {
   margin-right: 100px; }
-
-.projects__heading,
-.resume__heading,
-.values__heading,
-.stack__heading {
-  font-size: 16px; }
 
 @font-face {
   font-family: 'GT Pressura';
@@ -671,7 +659,8 @@ a:active {
 .resume__heading {
   font-family: "GT Pressura Mono", monospace;
   text-transform: uppercase;
-  letter-spacing: 3px; }
+  letter-spacing: 3px;
+  font-size: 16px; }
 
 .resume__jobs {
   list-style: none;
@@ -731,6 +720,7 @@ a:active {
 
 .stack__heading {
   font-family: "GT Pressura Mono", monospace;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center; }
@@ -746,6 +736,7 @@ a:active {
 
 .values__heading {
   font-family: "GT Pressura Mono", monospace;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 3px; }
 

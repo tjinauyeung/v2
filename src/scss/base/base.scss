@@ -26,15 +26,13 @@ a:active {
 
 ::selection {
   background-color: var(--text-accent);
-}
-
-.theme-inverted ::selection {
   color: #FFFFFF;
 }
 
 .outer-wrapper {
   background-color: var(--body-bg-color);
   margin-bottom: var(--footer-height);
+  transition: background-color 150ms ease-in-out;
 }
 
 .inner-wrapper {
@@ -48,11 +46,4 @@ a:active {
 
 .column--left {
   margin-right: 100px;
-}
-
-.projects__heading,
-.resume__heading,
-.values__heading,
-.stack__heading {
-  font-size: 16px;
 }
