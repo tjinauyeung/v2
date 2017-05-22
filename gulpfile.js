@@ -56,7 +56,8 @@ gulp.task('build', function() {
   return runSequence('clean', 'copy', 'css', 'js');
 });
 
-gulp.task('default', ['clean', 'copy', 'css', 'js', 'browser-sync'], function() {
+gulp.task('default', function() {
+  runSequence('clean', 'copy', 'css', 'js', 'browser-sync');
   gulp.watch('src/assets/**', ['assets']);
   gulp.watch('src/scss/*/*.scss', ['css']);
   gulp.watch('src/js/*.js', ['js']);

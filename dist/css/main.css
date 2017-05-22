@@ -422,6 +422,30 @@ template {
   --footer-bg-color: #06ED86;
   --footer-text-color: #FFFFFF; }
 
+@font-face {
+  font-family: 'GT Pressura';
+  src: url("../assets/fonts/gt-pressura-bold-web-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GT Pressura';
+  src: url("../assets/fonts/gt-pressura-regular-web-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GT Pressura Mono';
+  src: url("../assets/fonts/gt-pressura-mono-bold-web-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GT Pressura Mono';
+  src: url("../assets/fonts/gt-pressura-mono-regular-web-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
 *,
 *:before,
 *:after {
@@ -462,38 +486,6 @@ a:active {
 .inner-wrapper {
   max-width: 1180px;
   margin: 0 auto; }
-
-.column {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
-
-.column--left {
-  margin-right: 100px; }
-
-@font-face {
-  font-family: 'GT Pressura';
-  src: url("../../assets/fonts/gt-pressura-bold-web-webfont.woff") format(woff);
-  font-weight: 600;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'GT Pressura';
-  src: url("../../assets/fonts/gt-pressura-regular-web-webfont.woff") format(woff);
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'GT Pressura Mono';
-  src: url("../../assets/fonts/gt-pressura-mono-regular-web-webfont.woff") format(woff);
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'GT Pressura Mono';
-  src: url("../../assets/fonts/gt-pressura-mono-bold-web-webfont.woff") format(woff);
-  font-weight: 600;
-  font-style: normal; }
 
 .icon--nodejs {
   fill: var(--accent-color); }
@@ -585,25 +577,21 @@ a:active {
   fill: var(--icon-color); }
 
 .landing {
-  padding: var(--section-padding); }
-
-.landing {
+  padding: var(--section-padding);
   min-height: 100vh;
   position: relative;
   z-index: 1; }
-
-.landing__heading {
-  font-size: 26px;
-  font-weight: var(--text-font-weight);
-  margin: 50px 0;
-  line-height: var(--text-line-height);
-  letter-spacing: var(--text-letter-spacing); }
-
-.landing__subheading {
-  font-size: 40px;
-  line-height: var(--text-line-height);
-  letter-spacing: 1.5px;
-  max-width: 700px; }
+  .landing__heading {
+    font-size: 26px;
+    font-weight: var(--text-font-weight);
+    margin: 50px 0;
+    line-height: var(--text-line-height);
+    letter-spacing: var(--text-letter-spacing); }
+  .landing__subheading {
+    font-size: 40px;
+    line-height: var(--text-line-height);
+    letter-spacing: 1.5px;
+    max-width: 700px; }
 
 .social {
   padding: 0;
@@ -623,27 +611,23 @@ a:active {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-
-.social__link a {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer; }
-
-.social__link .icon {
-  fill: var(--icon-color);
-  width: 20px;
-  height: 20px;
-  margin-right: 20px; }
-
-.social__link a:hover {
-  color: var(--icon-hover-color); }
-
-.social__link a:hover .icon {
-  fill: var(--icon-hover-color); }
+  .social__link a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer; }
+  .social__link a:hover {
+    color: var(--icon-hover-color); }
+  .social__link a:hover .icon {
+    fill: var(--icon-hover-color); }
+  .social__link .icon {
+    fill: var(--icon-color);
+    width: 20px;
+    height: 20px;
+    margin-right: 20px; }
 
 .resume {
   padding: var(--section-padding);
@@ -655,80 +639,77 @@ a:active {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-
-.resume__heading {
-  font-family: "GT Pressura Mono", monospace;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 16px; }
-
-.resume__jobs {
-  list-style: none;
-  padding: 0;
-  margin-top: 80px;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: var(--text-line-height);
-  letter-spacing: var(--text-letter-spacing); }
-
-.resume__job {
-  margin-bottom: 50px; }
-
-.resume__job-heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: inherit;
-  font-weight: inherit; }
-
-.resume__job-heading .text-highlight {
-  font-weight: 400; }
+  .resume__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+    .resume__column:first-child {
+      margin-right: 100px; }
+  .resume__heading {
+    font-family: "GT Pressura Mono", monospace;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 16px; }
+  .resume__jobs {
+    list-style: none;
+    padding: 0;
+    margin-top: 80px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: var(--text-line-height);
+    letter-spacing: var(--text-letter-spacing); }
+  .resume__job {
+    margin-bottom: 50px; }
+  .resume__job-heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: inherit;
+    font-weight: inherit; }
+  .resume__job-heading .text-highlight {
+    font-weight: 400; }
 
 .stack {
   padding: var(--section-padding); }
-
-.stacklist {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 0;
-  list-style: none;
-  margin-top: 100px; }
-
-.stacklist li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  margin: 50px;
-  letter-spacing: 1.5px; }
-
-.stack__heading {
-  font-family: "GT Pressura Mono", monospace;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-align: center; }
-
-.stacklist .icon {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 25px; }
+  .stacklist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    margin-top: 100px; }
+  .stacklist .icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 25px; }
+  .stacklist li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    margin: 50px;
+    letter-spacing: 1.5px; }
+  .stack__heading {
+    font-family: "GT Pressura Mono", monospace;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center; }
 
 .values {
   padding: var(--section-padding);
@@ -761,19 +742,12 @@ a:active {
   color: var(--footer-text-color);
   background-color: var(--footer-bg-color);
   min-height: var(--footer-height); }
-
-.footer__body {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 100px; }
-
-.footer__heading {
-  font-size: 45px;
-  max-width: 500px;
-  line-height: var(--text-line-height);
-  letter-spacing: var(--text-letter-spacing); }
-
-.footnote {
-  position: absolute;
-  bottom: 10px;
-  right: 10px; }
+  .footer__body {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: var(--section-padding); }
+  .footer__heading {
+    font-size: 45px;
+    max-width: 500px;
+    line-height: var(--text-line-height);
+    letter-spacing: var(--text-letter-spacing); }
