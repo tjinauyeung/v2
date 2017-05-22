@@ -1,0 +1,35 @@
+.stack {
+  padding: var(--section-padding);
+
+  &list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    margin-top: 100px;
+  }
+
+  &list .icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 25px;
+  }
+
+  &list li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 50px;
+    letter-spacing: 1.5px;
+  }
+
+  &__heading {
+    font-family: "GT Pressura Mono", monospace;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,48 @@
+.resume {
+  padding: var(--section-padding);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__column {
+    flex: 1;
+
+    &:first-child {
+      margin-right: 100px;
+    }
+  }
+
+  &__heading {
+    font-family: "GT Pressura Mono", monospace;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 16px;
+  }
+
+  &__jobs {
+    list-style: none;
+    padding: 0;
+
+    margin-top: 80px;
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: var(--text-line-height);
+    letter-spacing: var(--text-letter-spacing);
+  }
+
+  &__job {
+    margin-bottom: 50px;
+  }
+
+  &__job-heading {
+    display: flex;
+    justify-content: space-between;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  &__job-heading .text-highlight {
+    font-weight: 400;
+  }
+}
