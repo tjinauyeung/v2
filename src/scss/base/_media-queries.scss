@@ -1,10 +1,15 @@
 @media screen and (max-width: 900px) {
   :root {
     --section-padding: 50px;
-    --text-size-large: 40px;
-    --text-size-med: 20px;
+    --text-size-large: 36px;
+    --text-size-med: 22px;
     --vertical-padding: 70px;
     --footer-height: 500px;
+    --ui-offset: 50px;
+  }
+
+  .social__link {
+    max-width: calc(50% - 5px);
   }
 
   .values .icon {
@@ -44,8 +49,21 @@
 @media screen and (max-width: 500px) {
   :root {
     --section-padding: 25px;
-    --text-size-large: 30px;
+    --text-size-large: 26px;
+    --text-size-med: 19px;
     --vertical-padding: 50px;
+    --ui-offset: 25px;
+  }
+
+  .theme-switch {
+    top: 0;
+    right: 0;
+    padding: 25px;
+
+    &__icon {
+      width: 15px;
+      height: 15px;
+    }
   }
 
   .outer-wrapper {
@@ -53,7 +71,7 @@
   }
 
   .social__link {
-    max-width: 145px;
+    max-width: calc(50% - 5px);
   }
 
   .resume__column:first-child {
@@ -83,7 +101,7 @@
   }
 
   .footer {
-    position: static;
+    position: relative;
     min-height: auto;
     text-align: center;
 
@@ -95,6 +113,10 @@
 
     &__body {
       flex-direction: column;
+    }
+
+    .underline {
+      box-shadow: inset 0 -3px 0 0 var(--footer-text-color);
     }
   }
 }

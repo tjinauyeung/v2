@@ -3,7 +3,7 @@
   position: relative;
   
   &__heading {
-    font-size: 26px;
+    font-size: var(--text-size-med);
     font-weight: var(--text-font-weight);
     margin: calc(25vh - var(--section-padding)) 0 50px;
     line-height: var(--text-line-height);
@@ -32,8 +32,8 @@
   letter-spacing: 2px;
 
   display: inline-flex;
-  min-height: 60px;
-  max-width: 200px;
+  min-height: 55px;
+  max-width: 250px;
   width: 100%;
   user-select: none;
   
@@ -45,16 +45,5 @@
 
   a:hover {
     color: var(--icon-hover-color);
-  }
-
-  a:hover .icon {
-    fill: var(--icon-hover-color);
-  }
-
-  .icon {
-    fill: var(--icon-color);
-    width: 20px;
-    height: 20px;
-    margin-right: 20px;
   }
 }

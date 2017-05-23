@@ -1,0 +1,98 @@
+.ui-frame {
+  .icon {
+    position: fixed;
+    cursor: pointer;
+    z-index: 9;
+    padding: var(--ui-offset);
+
+    &:hover .icon__description {
+      opacity: 1;
+      transform: translateX(0);
+      transition: all 130ms ease-out;
+    }
+  }
+
+  .icon svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+  }
+
+  .icon__description {
+    position: absolute;
+    top: calc(var(--ui-offset) + 5px);
+    width: 95px;
+    text-align: right;
+    font-family: "GT Pressura Mono", "Lucida Console", Monaco, monospace;
+    font-size: 11px;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 200ms ease-out;
+  }
+
+  .icon-github {
+    top: 0;
+    left: 0;
+
+    .icon__description {
+      left: calc(30px + var(--ui-offset));
+      transform: translateX(-40%);
+    }
+  }
+
+  .icon-email {
+    bottom: 0;
+    right: 0;
+
+    .icon__description {
+      right: calc(30px + var(--ui-offset));
+      transform: translateX(40%);
+    }
+  }
+
+  .icon-theme-switch {
+    top: 0;
+    right: 0;
+
+    .icon__description {
+      right: calc(30px + var(--ui-offset));
+      transform: translateX(40%);
+    }
+
+    .outline {
+      stroke: var(--icon-color);
+      stroke-width: 9px;
+    }
+
+    .left-half {
+      fill: var(--body-bg-color);
+    }
+
+    .right-half {
+      fill: var(--icon-color);
+    }
+  }
+}
+
+.theme-inverted {
+  .icon svg {
+    fill: var(--icon-color);
+  }
+
+  .icon-theme-switch {
+    .outline {
+      stroke: var(--icon-color);
+      stroke-width: 6px;
+    }
+
+    .left-half {
+      fill: var(--body-bg-color);
+    }
+
+    .right-half {
+      fill: var(--icon-color);
+    }
+  }
+}

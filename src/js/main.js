@@ -1,10 +1,8 @@
 (function(window, document) {
   'use strict';
 
-  const app = {};
-
   function initThemeSwitch() {
-    const themeSwitch = document.querySelector('.theme-switch');
+    const themeSwitch = document.querySelector('#theme-switch');
     const page = document.querySelector('html');
     const sfx = document.querySelector('#sfx-switch');
 
@@ -19,10 +17,12 @@
     themeSwitch.addEventListener('click', handleSwitch);
   }
 
-  app.init = function() {
-    initThemeSwitch();
-  }
+  function bootstrap(event) {
+    if (event.target.readyState === 'interactive') {
+      initThemeSwitch();
+    }
+  };
 
-  app.init();
+  document.addEventListener('readystatechange', bootstrap, false);
 
 })(window, document);
