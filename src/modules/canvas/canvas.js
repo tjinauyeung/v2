@@ -52,7 +52,7 @@
   }
 
   // Takes a step in the simulation
-  function step () {
+  function step() {
     for( var i = 0, len = layers.length; i < len; i++ ) {
       layers[i].r += 0.005;
     }

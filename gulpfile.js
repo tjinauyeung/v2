@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const eslint = require('gulp-eslint');
 const browserSync = require('browser-sync');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
@@ -34,10 +35,17 @@ gulp.task('css', function() {
 gulp.task('js', function() {
   return gulp.src('src/js/main.js')
     .pipe(gulp.dest('dist/js'))
-    // .pipe(uglify())
-    // .pipe(rename({ suffix: '.min' }))
+    .pipe(uglify())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.reload({stream:true, once: true}));
+});
+
+gulp.task('lint', function() {
+  return gulp.src(['**/*.js','!node_modules/**'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
 });
 
 gulp.task('browser-sync', function() {
@@ -53,7 +61,7 @@ gulp.task('bs-reload', function() {
 });
 
 gulp.task('build', function() {
-  return runSequence('clean', 'copy', 'css', 'js');
+  return runSequence('clean', 'copy', 'css', 'js', 'lint');
 });
 
 gulp.task('default', function() {
