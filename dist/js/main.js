@@ -4,7 +4,7 @@
   const app = {};
 
   function initThemeSwitch() {
-    const themeSwitch = document.querySelector('.theme-switch');
+    const themeSwitch = document.querySelector('#theme-switch');
     const page = document.querySelector('html');
     const sfx = document.querySelector('#sfx-switch');
 
