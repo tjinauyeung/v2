@@ -1,14 +1,14 @@
 .resume {
-  padding: var(--section-padding);
+  padding: var(--vertical-padding) var(--section-padding);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
   &__column {
-    flex: 1;
+    flex: 1 0 270px;
 
     &:first-child {
-      margin-right: 100px;
+      margin-right: var(--section-padding);
     }
   }
 
@@ -22,10 +22,8 @@
   &__jobs {
     list-style: none;
     padding: 0;
-
-    margin-top: 80px;
-
-    font-size: 22px;
+    margin-top: var(--vertical-padding);
+    font-size: var(--text-size-med);
     font-weight: 400;
     line-height: var(--text-line-height);
     letter-spacing: var(--text-letter-spacing);
@@ -33,6 +31,10 @@
 
   &__job {
     margin-bottom: 50px;
+
+    ul {
+      list-style: hiragana-iroha;
+    }
   }
 
   &__job-heading {

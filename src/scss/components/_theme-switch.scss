@@ -1,7 +1,7 @@
 .theme-switch {
   position: fixed;
-  top: 50px;
-  right: 50px;
+  top: var(--section-padding);
+  right: var(--section-padding);
   cursor: pointer;
   z-index: 9;
 }

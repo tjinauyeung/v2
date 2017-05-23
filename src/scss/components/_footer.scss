@@ -7,18 +7,35 @@
   color: var(--footer-text-color);
   background-color: var(--footer-bg-color);
   min-height: var(--footer-height);
+  display: flex;
+  align-items: center;
 
 
   &__body {
-    max-width: 1440px;
+    max-width: 1180px;
     margin: 0 auto;
-    padding: var(--section-padding);
+    padding: 50px var(--section-padding);
+    display: flex;
+    align-items: center;
   }
 
   &__heading {
-    font-size: 45px;
-    max-width: 500px;
+    font-size: var(--text-size-large);
+    max-width: 600px;
     line-height: var(--text-line-height);
     letter-spacing: var(--text-letter-spacing);
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    margin: 0 80px;
+  }
+
+  .section-divider {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
   }
 }

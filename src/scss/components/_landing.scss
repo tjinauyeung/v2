@@ -1,20 +1,19 @@
 .landing {
-  padding: var(--section-padding);
-  min-height: 100vh;
+  padding: var(--vertical-padding) var(--section-padding);
   position: relative;
-  z-index: 1;
   
   &__heading {
     font-size: 26px;
     font-weight: var(--text-font-weight);
-    margin: 50px 0;
+    margin: calc(25vh - var(--section-padding)) 0 50px;
     line-height: var(--text-line-height);
     letter-spacing: var(--text-letter-spacing);
   }
 
   &__subheading {
-    font-size: 40px;
+    font-size: var(--text-size-large);
     line-height: var(--text-line-height);
+    margin-top: var(--vertical-padding);
     letter-spacing: 1.5px;
     max-width: 700px;
   }
@@ -22,7 +21,7 @@
 
 .social {
   padding: 0;
-  margin-top: 70px;
+  margin: var(--vertical-padding) 0 0;
   list-style: none;
   max-width: 600px;
 }
@@ -32,7 +31,7 @@
   font-size: 16px;
   letter-spacing: 2px;
 
-  display: inline-block;
+  display: inline-flex;
   min-height: 60px;
   max-width: 200px;
   width: 100%;

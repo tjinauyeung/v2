@@ -1,8 +1,11 @@
 :root {
+  --text-size-large: 40px;
+  --text-size-med: 22px;
   --text-line-height: 1.5;
   --text-letter-spacing: 2px;
-  --footer-height: 500px;
+  --footer-height: 375px;
   --section-padding: 100px;
+  --vertical-padding: 80px;
 }
 
 :root {
@@ -14,8 +17,8 @@
   --text-font-weight: 100;
   --icon-color: #FFFFFF;
   --icon-hover-color: #06ED86;
-  --footer-bg-color: #000;
-  --footer-text-color: #FFFFFF;
+  --footer-bg-color: #F9F9F9;
+  --footer-text-color: #1A1A1A;
 }
 
 .theme-inverted {

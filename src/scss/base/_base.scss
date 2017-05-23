@@ -39,3 +39,22 @@ a:active {
   max-width: 1180px;
   margin: 0 auto;
 }
+
+.section-divider {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  letter-spacing: .6em;
+  border: none;
+  margin: 0;
+
+  &:before {
+    content: '...';
+    display: block;
+    margin: auto;
+    width: 57px;
+    height: 0;
+    line-height: 0;
+  }
+}
