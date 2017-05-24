@@ -49,7 +49,25 @@
 
     .theme-inverted & {
       color: #222;
-      font-weight: 700;
+      font-weight: 600;
+    }
+  }
+
+  .text-underline {
+    display: inline-block;
+
+    &:after {
+      content: '';
+      width: 0%;
+      height: 1px;
+      display: block;
+      background-color: var(--text-color);
+      transition: width 250ms ease-in-out;
+    }
+
+    &:hover:after {
+      width: 100%;
+      transition: width 200ms ease-in-out;
     }
   }
 }

@@ -17,30 +17,30 @@
 :root {
   --body-bg-color: #1A1A1A;
   --accent-color: #06ED86;
-  --text-color: #FFFFFF;
+  --text-color: #F1F1F1;
   --text-highlight-color: var(--accent-color);
   --text-accent: var(--accent-color);
   --text-font-weight: 100;
   --icon-color: #FFFFFF;
   --icon-hover-color: var(--accent-color);
-  --footer-bg-color: #F9F9F9;
+  --footer-bg-color: #F1F1F1;
   --footer-text-color: #1A1A1A;
 }
 
 .theme-inverted {
   --accent-color: #7f33f4;
-  --body-bg-color: #F2F2F2;
+  --body-bg-color: #F1F1F1;
   --text-color: #333;
   --text-font-weight: 400;
   --icon-color: #333;
   --footer-bg-color: var(--accent-color);
-  --footer-text-color: #FFFFFF;
+  --footer-text-color: #F1F1F1;
 }
 
 .serif {
   --typography: var(--serif);
   --text-letter-spacing-large: 0.8px;
-  --text-letter-spacing: 0.3px;
+  --text-letter-spacing: 0.4px;
 
   .landing__body {
     padding-bottom: calc(var(--vertical-padding) - 6px);

@@ -36,7 +36,8 @@ gulp.task('css', function() {
 gulp.task('js', function() {
   return gulp.src('src/js/main.js')
     .pipe(webpack(webpackConfig))
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('dist/js'))
+    .pipe(browserSync.reload({stream:true, once: true}));
 });
 
 gulp.task('lint', function() {

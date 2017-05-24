@@ -34,10 +34,10 @@
       }
 
       @keyframes appear {
-        0% {
+        from {
           opacity: 1;
         }
-        100% {
+        to {
           opacity: 0;
         }
       }
@@ -78,26 +78,14 @@
               <path class="left-half" d="M17,34c9.4,0,17-7.6,17-17S26.4,0,17,0L17,34z"></path>
               <path class="right-half" d="M17,34C7.6,34,0,26.4,0,17S7.6,0,17,0L17,34z"></path>
             </svg>
-            <audio id="sfx-switch" src="dist/assets/sfx/sfx-switch.mp3" hidden></audio>
             <span class="icon__description">invert theme</span>
           </div>
 
-          <div class="icon icon-email">
-            <a href="mailto:tjinauyeung@gmail.com">
-              <svg viewBox="0 -5 32 30">
-                <path d="M0.73875,0 L6.77625,6.53625 L2.515875,14.931 L11.51175,13.31925 L15.60675,23.19975 L33,0.3885 L0.73875,0 Z M7.261875,10.707375 L10.0575,5.76975 L26.50575,1.91625 L7.25925,10.71 L7.261875,10.707375 Z"></path>
-              </svg>
-              <span class="icon__description">
-                  email me
-              </span>
-            </a>
-          </div>
-
           <div class="icon icon-typography" id="typography-switch">
-            <svg viewBox="0 -2 28 22">
+            <svg viewBox="0 7 28 22">
               <text id="Aa">
                 <tspan x="2" y="20">A</tspan>
-                <tspan x="16" y="20">a</tspan>
+                <tspan x="14" y="20">a</tspan>
               </text>
             </svg>
             <span class="icon__description">
@@ -220,7 +208,7 @@
               <li class="resume__job">
                 <h3 class="resume__job-heading">
                   <span class="text-highlight">
-                    <a href="https://www.codaisseur.com">Codaisseur</a>
+                    <a href="https://www.codaisseur.com" target="_blank" rel="noopener">Codaisseur</a>
                   </span><br>
                   <span class="text-highlight">2016 &mdash; now</span>
                 </h3>
@@ -274,7 +262,7 @@
                   <span class="text-highlight">Need a speaker?</span>
                 </h3>
                 <p>
-                  I would love to do more public talks. Are you organizing an event and in need for a speaker?<br><a href="mailto:tjinauyeung.nl">Let me know.</a>
+                  I would love to do more public talks. Are you organizing an event and in need for a speaker? <a href="mailto:tjinauyeung.nl"><span class="text-underline">Let me know</span></a>.
                 </p>
               </li>
             </ul>
@@ -305,7 +293,7 @@
               Angular
             </li>
             <li>
-              <svg class="icon icon--react" viewBox="0 -2 45 50">
+              <svg class="icon icon--react" viewBox="0 -4 45 50">
                 <circle fill="#53C1DE" cx="23.5" cy="22.5" r="3.5"></circle>
                 <ellipse fill="none" stroke="#53C1DE" stroke-width="3" transform="translate(23.500000, 22.500000) rotate(2.000000) translate(-23.500000, -22.500000) " cx="23.5" cy="22.5" rx="9.5" ry="21.5"></ellipse>
                 <ellipse fill="none" stroke="#53C1DE" stroke-width="3" transform="translate(23.500000, 22.500000) rotate(61.000000) translate(-23.500000, -22.500000) " cx="23.5" cy="22.5" rx="9.5" ry="21.5"></ellipse>
@@ -376,10 +364,10 @@
 
     <footer class="footer">
       <section class="footer__body">
-        <img class="footer__image" src="dist/assets/images/profile-picture.png" alt="Profile picture of Tjin Au Yeung - front-end developer">
+        <img class="footer__image" src="dist/assets/images/profile-picture-bw.png" alt="Profile picture of Tjin Au Yeung - front-end developer">
         <h2 class="footer__heading">
           Want to work together? <br>
-          <a href="mailto:tjinauyeung@gmail.com">Don’t hesitate to g<span class="underline">et in touch</a></a>.
+          Don’t hesitate to <a href="mailto:tjinauyeung@gmail.com"><span class="underline">get in touch</span></a>.
         </h2>
       </section>
       <hr class="section-divider">

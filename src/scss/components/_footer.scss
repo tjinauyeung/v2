@@ -40,6 +40,21 @@
   }
 
   .underline {
-    box-shadow: inset 0 -4px 0 0 var(--footer-text-color);
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      content: '';
+      width: 0%;
+      height: 4px;
+      display: block;
+      background-color: var(--footer-text-color);
+      transition: width 250ms ease-in-out;
+    }
+
+    &:hover:after {
+      width: 100%;
+      transition: width 200ms ease-in-out;
+    }
   }
 }

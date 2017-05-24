@@ -6,7 +6,6 @@ class ThemeSwitch {
     this.storage = config.storage || window.localStorage;
     this.classUtil = config.classUtil || classUtil;
     this.switch = config.switchElement;
-    this.sfx = config.sfxElement;
     this.themeClasses = config.themeClasses;
     this.themeType = config.themeType;
   }
@@ -14,15 +13,12 @@ class ThemeSwitch {
   setup() {
     this.theme = this.getTheme();
     this.setTheme(this.theme);
-    // TODO: move to seperate config
-    this.sfx.volume = 0.1;
     this.switch.addEventListener('click', this.handleSwitch.bind(this));
   }
 
   handleSwitch() {
     this.toggleTheme();
     this.setTheme(this.theme);
-    this.playSFX();
   }
 
   getTheme() {
@@ -45,11 +41,6 @@ class ThemeSwitch {
 
   saveTheme(theme) {
     this.storage.setItem(this.themeType, theme);
-  }
-
-  playSFX() {
-    this.sfx.currentTime = 0;
-    this.sfx.play();
   }
 }
 

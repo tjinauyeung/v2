@@ -20,12 +20,12 @@
   .icon svg {
     width: 18px;
     height: 18px;
-    fill: white;
+    fill: var(--icon-color);
   }
 
   .icon__description {
     position: absolute;
-    top: calc(var(--ui-offset) + 5px);
+    top: calc(var(--ui-offset) + 4px);
     width: 95px;
     text-align: right;
     font-family: var(--monospace);
@@ -38,16 +38,6 @@
   }
 
   .icon-github {
-    bottom: 0;
-    left: 0;
-
-    .icon__description {
-      left: calc(30px + var(--ui-offset));
-      transform: translateX(-40%);
-    }
-  }
-
-  .icon-email {
     bottom: 0;
     right: 0;
 
@@ -65,8 +55,7 @@
     left: 0;
 
     .icon__description {
-      left: calc(40px + var(--ui-offset));
-      top: calc(var(--ui-offset) + 13px);
+      left: calc(35px + var(--ui-offset));
       transform: translateX(-30%);
       width: 130px;
     }
@@ -76,16 +65,10 @@
       height: 22px;
     }
 
-    .monospace & svg {
-      font-family: var(--monospace);
-    }
-
-    .sans-serif & svg {
-      font-family: var(--sans-serif);
-    }
-
     .serif & svg {
       font-family: var(--serif);
+      font-weight: 400;
+      font-size: 19px;
     }
   }
 
@@ -100,28 +83,7 @@
 
     .outline {
       stroke: var(--icon-color);
-      stroke-width: 9px;
-    }
-
-    .left-half {
-      fill: var(--body-bg-color);
-    }
-
-    .right-half {
-      fill: var(--icon-color);
-    }
-  }
-}
-
-.theme-inverted {
-  .icon svg {
-    fill: var(--icon-color);
-  }
-
-  .icon-theme-switch {
-    .outline {
-      stroke: var(--icon-color);
-      stroke-width: 6px;
+      stroke-width: 5px;
     }
 
     .left-half {
