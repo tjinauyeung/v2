@@ -35,9 +35,6 @@ gulp.task('css', function() {
 gulp.task('js', function() {
   return gulp.src('src/js/main.js')
     .pipe(gulp.dest('dist/js'))
-    .pipe(uglify())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.reload({stream:true, once: true}));
 });
 

@@ -392,40 +392,6 @@ template {
 [hidden] {
   display: none; }
 
-:root {
-  --text-size-large: 40px;
-  --text-size-med: 24px;
-  --text-line-height: 1.5;
-  --text-letter-spacing: 2px;
-  --footer-height: 375px;
-  --section-padding: 100px;
-  --vertical-padding: 80px;
-  --ui-offset: 50px; }
-
-:root {
-  --body-bg-color: #1A1A1A;
-  --accent-color: #06ED86;
-  --text-color: #FFFFFF;
-  --text-highlight-color: #06ED86;
-  --text-accent: #06ED86;
-  --text-font-weight: 100;
-  --icon-color: #FFFFFF;
-  --icon-hover-color: #06ED86;
-  --footer-bg-color: #F9F9F9;
-  --footer-text-color: #1A1A1A; }
-
-.theme-inverted {
-  --accent-color: #06ED86;
-  --body-bg-color: #F2F2F2;
-  --text-color: #333;
-  --text-highlight-color: #06ED86;
-  --text-accent: #06ED86;
-  --text-font-weight: 400;
-  --icon-color: #333;
-  --icon-hover-color: #06ED86;
-  --footer-bg-color: #06ED86;
-  --footer-text-color: #FFFFFF; }
-
 @font-face {
   font-family: 'GT Pressura';
   src: url("../assets/fonts/gt-pressura-bold-web-webfont.woff") format("woff");
@@ -450,6 +416,64 @@ template {
   font-weight: 400;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Freight';
+  src: url("../assets/fonts/freight-text-bold-web-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Freight';
+  src: url("../assets/fonts/freight-text-regular-web-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+:root {
+  --text-size-large: 40px;
+  --text-size-med: 24px;
+  --text-line-height: 1.5;
+  --text-letter-spacing: 2px;
+  --text-letter-spacing-large: 1.8px;
+  --footer-height: 375px;
+  --section-padding: 100px;
+  --vertical-padding: 80px;
+  --ui-offset: 50px;
+  --monospace: 'GT Pressura Mono', monospace;
+  --serif: 'Freight', serif;
+  --sans-serif: 'GT Pressura', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+  --typography: var(--sans-serif); }
+
+:root {
+  --body-bg-color: #1A1A1A;
+  --accent-color: #06ED86;
+  --text-color: #FFFFFF;
+  --text-highlight-color: var(--accent-color);
+  --text-accent: var(--accent-color);
+  --text-font-weight: 100;
+  --icon-color: #FFFFFF;
+  --icon-hover-color: var(--accent-color);
+  --footer-bg-color: #F9F9F9;
+  --footer-text-color: #1A1A1A; }
+
+.theme-inverted {
+  --accent-color: #7f33f4;
+  --body-bg-color: #F2F2F2;
+  --text-color: #333;
+  --text-font-weight: 400;
+  --icon-color: #333;
+  --footer-bg-color: var(--accent-color);
+  --footer-text-color: #FFFFFF; }
+
+.serif {
+  --typography: var(--serif);
+  --text-letter-spacing-large: 0.8px;
+  --text-letter-spacing: 0.8px; }
+  .serif .landing__body {
+    padding-bottom: calc(var(--vertical-padding) - 6px); }
+
+.sans-serif {
+  --typography: var(--sans-serif); }
+
 *,
 *:before,
 *:after {
@@ -464,7 +488,8 @@ body {
   padding: 0;
   overflow-x: hidden;
   color: var(--text-color);
-  font-family: "GT Pressura", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+  font-family: var(--typography);
+  text-rendering: optimizeLegibility; }
 
 a,
 a:hover,
@@ -492,13 +517,15 @@ a:active {
   margin: 0 auto; }
 
 .section-divider {
-  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-family: 'Freight', serif;
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
   letter-spacing: .6em;
   border: none;
   margin: 0; }
+  .section-divider:last-child {
+    font-weight: 600; }
   .section-divider:before {
     content: '...';
     display: block;
@@ -508,7 +535,7 @@ a:active {
     line-height: 0; }
 
 .icon--nodejs {
-  fill: var(--accent-color); }
+  fill: #06ED86; }
 
 .icon--reactjs {
   -webkit-animation: rotate linear 30s infinite;
@@ -561,7 +588,11 @@ a:active {
   position: fixed;
   cursor: pointer;
   z-index: 9;
-  padding: var(--ui-offset); }
+  padding: var(--ui-offset);
+  max-width: 120px;
+  max-height: 120px;
+  width: 100%;
+  height: 100%; }
   .ui-frame .icon:hover .icon__description {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -579,7 +610,7 @@ a:active {
   top: calc(var(--ui-offset) + 5px);
   width: 95px;
   text-align: right;
-  font-family: "GT Pressura Mono", "Lucida Console", Monaco, monospace;
+  font-family: var(--monospace);
   font-size: 11px;
   font-weight: 100;
   letter-spacing: 1.5px;
@@ -589,7 +620,7 @@ a:active {
   transition: all 200ms ease-out; }
 
 .ui-frame .icon-github {
-  top: 0;
+  bottom: 0;
   left: 0; }
   .ui-frame .icon-github .icon__description {
     left: calc(30px + var(--ui-offset));
@@ -603,6 +634,28 @@ a:active {
     right: calc(30px + var(--ui-offset));
     -webkit-transform: translateX(40%);
             transform: translateX(40%); }
+
+.ui-frame .icon-typography {
+  font-family: var(--sans-serif);
+  font-size: 18px;
+  font-weight: 400;
+  top: 0;
+  left: 0; }
+  .ui-frame .icon-typography .icon__description {
+    left: calc(40px + var(--ui-offset));
+    top: calc(var(--ui-offset) + 13px);
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+    width: 130px; }
+  .ui-frame .icon-typography svg {
+    width: 30px;
+    height: 22px; }
+  .monospace .ui-frame .icon-typography svg {
+    font-family: var(--monospace); }
+  .sans-serif .ui-frame .icon-typography svg {
+    font-family: var(--sans-serif); }
+  .serif .ui-frame .icon-typography svg {
+    font-family: var(--serif); }
 
 .ui-frame .icon-theme-switch {
   top: 0;
@@ -638,30 +691,50 @@ a:active {
   .landing__heading {
     font-size: var(--text-size-med);
     font-weight: var(--text-font-weight);
-    margin: calc(25vh - var(--section-padding)) 0 50px;
+    margin: calc(30vh - var(--section-padding)) 0 0;
     line-height: var(--text-line-height);
-    letter-spacing: var(--text-letter-spacing); }
+    letter-spacing: 2px;
+    font-family: var(--sans-serif);
+    font-weight: 400; }
   .landing__subheading {
     font-size: var(--text-size-large);
     line-height: var(--text-line-height);
-    margin-top: var(--vertical-padding);
-    letter-spacing: 1.5px;
+    margin: 0;
+    letter-spacing: var(--text-letter-spacing-large);
     max-width: 700px; }
+  .landing__body {
+    padding: var(--vertical-padding) 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .landing .lodash {
+    font-family: var(--sans-serif); }
 
 .social {
   padding: 0;
-  margin: var(--vertical-padding) 0 0;
+  margin: 0;
   list-style: none;
   max-width: 600px; }
 
 .social__link {
-  font-weight: var(--text-font-weight);
+  font-family: 'GT Pressura', sans-serif;
+  font-weight: 400;
   font-size: 16px;
   letter-spacing: 2px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  min-height: 55px;
+  min-height: 50px;
   max-width: 250px;
   width: 100%;
   -webkit-user-select: none;
@@ -696,7 +769,7 @@ a:active {
     .resume__column:first-child {
       margin-right: var(--section-padding); }
   .resume__heading {
-    font-family: "GT Pressura Mono", "Lucida Console", Monaco, monospace;
+    font-family: 'GT Pressura Mono', monospace;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 16px; }
@@ -760,7 +833,7 @@ a:active {
     margin: 40px;
     letter-spacing: 1.5px; }
   .stack__heading {
-    font-family: "GT Pressura Mono", "Lucida Console", Monaco, monospace;
+    font-family: 'GT Pressura Mono', monospace;
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -770,7 +843,7 @@ a:active {
   padding: var(--vertical-padding) var(--section-padding);
   text-align: center; }
   .values__heading {
-    font-family: "GT Pressura Mono", "Lucida Console", Monaco, monospace;
+    font-family: 'GT Pressura Mono', monospace;
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 3px; }
@@ -780,7 +853,7 @@ a:active {
     max-width: 650px;
     margin: var(--vertical-padding) auto;
     line-height: var(--text-line-height);
-    letter-spacing: var(--text-letter-spacing); }
+    letter-spacing: var(--text-letter-spacing-large); }
     .values__paragraph:last-child {
       margin-bottom: 0; }
   .values .icon {

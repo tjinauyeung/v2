@@ -13,7 +13,8 @@ body {
   padding: 0;
   overflow-x: hidden;
   color: var(--text-color);
-  font-family: "GT Pressura", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: var(--typography);
+  text-rendering: optimizeLegibility;
 }
 
 a,
@@ -41,13 +42,17 @@ a:active {
 }
 
 .section-divider {
-  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-family: 'Freight', serif;
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
   letter-spacing: .6em;
   border: none;
   margin: 0;
+
+  &:last-child {
+    font-weight: 600;
+  }
 
   &:before {
     content: '...';
