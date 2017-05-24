@@ -55,19 +55,29 @@
     --ui-offset: 25px;
   }
 
-  .theme-switch {
-    top: 0;
-    right: 0;
-    padding: 25px;
-
-    &__icon {
-      width: 15px;
-      height: 15px;
-    }
-  }
-
   .outer-wrapper {
     margin-bottom: 0;
+  }
+
+  .ui-frame {
+    .icon {
+      padding: var(--section-padding);
+      width: auto;
+      height: auto;
+      max-width: 70px;
+      max-height: 70px;
+    }
+
+    .icon:hover .icon__description {
+      opacity: 0;
+      transform: none;
+      transition: none;
+    }
+
+    .icon-theme-switch svg {
+      width: 17px;
+      height: 17px;
+    }
   }
 
   .social__link {

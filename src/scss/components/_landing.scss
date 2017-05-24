@@ -1,42 +1,57 @@
 .landing {
   padding: var(--vertical-padding) var(--section-padding);
   position: relative;
-  
+
   &__heading {
     font-size: var(--text-size-med);
     font-weight: var(--text-font-weight);
-    margin: calc(25vh - var(--section-padding)) 0 50px;
+    margin: calc(30vh - var(--section-padding)) 0 0;
     line-height: var(--text-line-height);
-    letter-spacing: var(--text-letter-spacing);
+    letter-spacing: 2px;
+    font-family: var(--sans-serif);
+    font-weight: 400;
   }
 
   &__subheading {
     font-size: var(--text-size-large);
     line-height: var(--text-line-height);
-    margin-top: var(--vertical-padding);
-    letter-spacing: 1.5px;
+    margin: 0;
+    letter-spacing: var(--text-letter-spacing-large);
     max-width: 700px;
+  }
+
+  &__body {
+    padding: var(--vertical-padding) 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .lodash {
+    font-family: var(--sans-serif);
   }
 }
 
 .social {
   padding: 0;
-  margin: var(--vertical-padding) 0 0;
+  margin: 0;
   list-style: none;
   max-width: 600px;
 }
 
 .social__link {
-  font-weight: var(--text-font-weight);
+  font-family: 'GT Pressura', sans-serif;
+  font-weight: 400;
   font-size: 16px;
   letter-spacing: 2px;
 
   display: inline-flex;
-  min-height: 55px;
+  min-height: 50px;
   max-width: 250px;
   width: 100%;
   user-select: none;
-  
+
   a {
     display: inline-flex;
     align-items: center;

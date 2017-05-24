@@ -1,9 +1,9 @@
 .values {
   padding: var(--vertical-padding) var(--section-padding);
   text-align: center;
-  
+
   &__heading {
-    font-family: "GT Pressura Mono", "Lucida Console", Monaco, monospace;
+    font-family: 'GT Pressura Mono', monospace;
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -15,7 +15,7 @@
     max-width: 650px;
     margin: var(--vertical-padding) auto;
     line-height: var(--text-line-height);
-    letter-spacing: var(--text-letter-spacing);
+    letter-spacing: var(--text-letter-spacing-large);
 
     &:last-child {
       margin-bottom: 0;

@@ -3,34 +3,50 @@
   --text-size-med: 24px;
   --text-line-height: 1.5;
   --text-letter-spacing: 2px;
+  --text-letter-spacing-large: 1.8px;
   --footer-height: 375px;
   --section-padding: 100px;
   --vertical-padding: 80px;
   --ui-offset: 50px;
+  --monospace: 'GT Pressura Mono', monospace;
+  --serif: 'Freight', serif;
+  --sans-serif: 'GT Pressura', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+  --typography: var(--sans-serif);
 }
 
 :root {
   --body-bg-color: #1A1A1A;
   --accent-color: #06ED86;
-  --text-color: #FFFFFF;
-  --text-highlight-color: #06ED86;
-  --text-accent: #06ED86;
+  --text-color: #F1F1F1;
+  --text-highlight-color: var(--accent-color);
+  --text-accent: var(--accent-color);
   --text-font-weight: 100;
   --icon-color: #FFFFFF;
-  --icon-hover-color: #06ED86;
-  --footer-bg-color: #F9F9F9;
+  --icon-hover-color: var(--accent-color);
+  --footer-bg-color: #F1F1F1;
   --footer-text-color: #1A1A1A;
 }
 
 .theme-inverted {
-  --accent-color: #06ED86;
-  --body-bg-color: #F2F2F2;
+  --accent-color: #7f33f4;
+  --body-bg-color: #F1F1F1;
   --text-color: #333;
-  --text-highlight-color: #06ED86;
-  --text-accent: #06ED86;
   --text-font-weight: 400;
   --icon-color: #333;
-  --icon-hover-color: #06ED86;
-  --footer-bg-color: #06ED86;
-  --footer-text-color: #FFFFFF;
+  --footer-bg-color: var(--accent-color);
+  --footer-text-color: #F1F1F1;
+}
+
+.serif {
+  --typography: var(--serif);
+  --text-letter-spacing-large: 0.8px;
+  --text-letter-spacing: 0.8px;
+
+  .landing__body {
+    padding-bottom: calc(var(--vertical-padding) - 6px);
+  }
+}
+
+.sans-serif {
+  --typography: var(--sans-serif);
 }
