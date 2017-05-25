@@ -33,7 +33,7 @@ a:active {
 .outer-wrapper {
   background-color: var(--body-bg-color);
   margin-bottom: var(--footer-height);
-  transition: background-color 150ms ease-in-out;
+  transition: background-color 300ms ease-in;
 }
 
 .inner-wrapper {
