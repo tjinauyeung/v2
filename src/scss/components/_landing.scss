@@ -51,14 +51,27 @@
   max-width: 250px;
   width: 100%;
   user-select: none;
+  position: relative;
 
   a {
-    display: inline-flex;
-    align-items: center;
+    position: relative;
     cursor: pointer;
-  }
 
-  a:hover {
-    color: var(--icon-hover-color);
+    &:after {
+      content: '';
+      width: 0%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 24px;
+      display: block;
+      background-color: var(--text-color);
+      transition: width 250ms ease-in-out;
+    }
+
+    &:hover:after {
+      width: 100%;
+      transition: width 200ms ease-in-out;
+    }
   }
 }
