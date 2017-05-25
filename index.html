@@ -9,6 +9,39 @@
     <link rel="icon" type="image/png" href="dist/assets/images/favicon-70x70.png" sizes="70x70">
     <link rel="icon" type="image/png" href="dist/assets/images/favicon-128x128.png" sizes="128x128">
     <link rel="apple-touch-icon-precomposed" href="dist/assets/images/apple-touch-icon-120x120.png" sizes="120x120">
+    <!-- inline critical css -->
+    <style>
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #F1F1F1;
+
+        pointer-events: none;
+        z-index: 999;
+
+        font-family: monospace;
+        color: #000;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        animation: appear 450ms normal forwards ease-in-out;
+        animation-delay: 1.5s;
+      }
+
+      @keyframes appear {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
     <link rel="stylesheet" href="dist/css/main.min.css" defer>
   </head>
   <body>
@@ -19,6 +52,10 @@
         Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
+
+    <div class="loader">
+      <p><strong>loading:</strong> fetching theme<span class="blink">_</span></p>
+    </div>
 
     <div class="outer-wrapper">
       <div class="inner-wrapper">
@@ -349,6 +386,7 @@
     </footer>
 
     <script src="dist/js/app.bundle.js"></script>
+
     <!-- Google Analytics -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
