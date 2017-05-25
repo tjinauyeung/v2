@@ -27,7 +27,6 @@ gulp.task('css', function() {
   return gulp.src('src/scss/main.scss')
     .pipe(sass({errLogToConsole: true}))
     .pipe(autoprefixer('last 2 version'))
-    .pipe(gulp.dest('dist/css'))
     .pipe(cssnano())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist/css'))
