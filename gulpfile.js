@@ -7,6 +7,8 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const runSequence = require('run-sequence');
 const cssnano = require('gulp-cssnano');
+const webpack = require('gulp-webpack');
+const webpackConfig = require('./webpack.config');
 const del = require('del');
 
 gulp.task('clean', function() {
@@ -34,13 +36,13 @@ gulp.task('css', function() {
 
 gulp.task('js', function() {
   return gulp.src('src/js/main.js')
-    .pipe(gulp.dest('dist/js'))
-    .pipe(browserSync.reload({stream:true, once: true}));
+    .pipe(webpack(webpackConfig))
+    .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('lint', function() {
-  return gulp.src(['**/*.js','!node_modules/**'])
-    .pipe(eslint())
+  return gulp.src(['src/js/**.js','!node_modules/**'])
+    .pipe(eslint(require('./.eslintrc')))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
