@@ -1,9 +1,9 @@
 @media screen and (min-width: 1300px) {
   :root {
     --section-padding: 100px;
-    --text-size-large: 45px;
-    --text-size-med: 24px;
-    --vertical-padding: 80px;
+    --text-size-large: 48px;
+    --text-size-med: 22px;
+    --vertical-padding: 90px;
     --footer-height: 500px;
     --ui-offset: 50px;
   }
@@ -12,12 +12,14 @@
     font-size: 17px;
   }
 
-  .inner-wrapper {
+  .wrapper {
     max-width: 1220px;
+    margin: auto;
   }
 
   .landing__subheading {
-    max-width: 800px;
+    max-width: 820px;
+    line-height: 1.4;
   }
 
   .values__paragraph {
@@ -25,7 +27,7 @@
   }
 
   .footer__heading {
-    max-width: 700px;
+    max-width: 750px;
   }
 }
 
@@ -86,10 +88,6 @@
     --ui-offset: 25px;
   }
 
-  .outer-wrapper {
-    margin-bottom: 0;
-  }
-
   .ui-frame {
     .icon {
       padding: var(--section-padding);
@@ -142,8 +140,6 @@
   }
 
   .footer {
-    position: relative;
-    min-height: auto;
     text-align: center;
 
     &__image {

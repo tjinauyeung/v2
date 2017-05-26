@@ -1,12 +1,6 @@
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
   color: var(--footer-text-color);
   background-color: var(--footer-bg-color);
-  min-height: var(--footer-height);
   display: flex;
   align-items: center;
 
@@ -14,7 +8,7 @@
   &__body {
     max-width: 1180px;
     margin: 0 auto;
-    padding: 50px var(--section-padding);
+    padding: var(--vertical-padding) var(--section-padding);
     display: flex;
     align-items: center;
   }
@@ -32,29 +26,23 @@
     margin: 0 80px;
   }
 
-  .section-divider {
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    right: 0;
-  }
-
   .underline {
     position: relative;
     display: inline-block;
+    color: var(--footer-highlight-color);
 
     &:after {
       content: '';
       width: 0%;
       height: 4px;
       display: block;
-      background-color: var(--footer-text-color);
-      transition: width 250ms ease-in-out;
+      background-color: var(--footer-highlight-color);
+      transition: width 350ms ease-in-out;
     }
 
     &:hover:after {
       width: 100%;
-      transition: width 200ms ease-in-out;
+      transition: width 350ms ease-in-out;
     }
   }
 }

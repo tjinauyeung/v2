@@ -16,6 +16,8 @@
 
 :root {
   --body-bg-color: #1A1A1A;
+  --theme-bg-dark: #1A1A1A;
+  --theme-bg-light: #F1F1F1;
   --accent-color: #06ED86;
   --text-color: #F1F1F1;
   --text-highlight-color: var(--accent-color);
@@ -25,6 +27,7 @@
   --icon-hover-color: var(--accent-color);
   --footer-bg-color: #F1F1F1;
   --footer-text-color: #1A1A1A;
+  --footer-highlight-color: #06ED86;
 }
 
 .theme-inverted {
