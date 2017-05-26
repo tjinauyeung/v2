@@ -42,7 +42,8 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="dist/css/main.min.css" defer>
+    <link rel="preload" href="dist/css/main.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="dist/css/main.min.css"></noscript>
   </head>
   <body>
 
