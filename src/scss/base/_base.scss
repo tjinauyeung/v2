@@ -33,7 +33,7 @@ a:active {
 .theme-bg-dark,
 .theme-bg-light {
   width: 100%;
-  height: 100%;
+  height: calc(100vh + 200px);
   position: fixed;
   top: 0;
   left: 0;
