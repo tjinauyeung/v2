@@ -2,9 +2,9 @@ import classUtil from './classUtil';
 
 class ThemeSwitch {
   constructor(config) {
-    this.page = config.page || document.querySelector('html');
     this.storage = config.storage || window.localStorage;
     this.classUtil = config.classUtil || classUtil;
+    this.page = config.pageElement;
     this.switch = config.switchElement;
     this.themeClasses = config.themeClasses;
     this.themeType = config.themeType;

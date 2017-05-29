@@ -1,15 +1,19 @@
 import Theme from './Theme';
 
+const pageElement = document.querySelector('html');
+const colorSwitchElement = document.querySelector('#theme-switch');
+const typographySwitchElement = document.querySelector('#typography-switch');
+
 const colorConfig = {
-  sfxElement: document.querySelector('#sfx-switch'),
-  switchElement: document.querySelector('#theme-switch'),
+  pageElement,
+  switchElement: colorSwitchElement,
   themeClasses: ['default', 'theme-inverted'],
   themeType: 'colors'
 };
 
 const typographyConfig = {
-  sfxElement: document.querySelector('#sfx-switch'),
-  switchElement: document.querySelector('#typography-switch'),
+  pageElement,
+  switchElement: typographySwitchElement,
   themeClasses: ['sans-serif', 'serif'],
   themeType: 'typography'
 };

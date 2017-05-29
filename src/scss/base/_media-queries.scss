@@ -75,6 +75,17 @@
   }
 }
 
+@media screen and (max-width: 690px) {
+  .resume {
+    display: block;
+
+    &__column,
+    &__column:first-child {
+      margin-right: 0;
+    }
+  }
+}
+
 @media screen and (max-width: 500px) {
   :root {
     --section-padding: 25px;
@@ -107,10 +118,6 @@
 
   .social__link {
     max-width: calc(50% - 5px);
-  }
-
-  .resume__column:first-child {
-    margin: 35px 0;
   }
 
   .values .icon {
