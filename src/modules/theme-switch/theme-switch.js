@@ -1,6 +1,5 @@
 (function(window, document) {
   'use strict';
-
   const themeSwitch = document.querySelector('.theme-switch');
   const page = document.querySelector('html');
   const sfx = document.querySelector('#sfx-switch');
@@ -14,5 +13,4 @@
   sfx.volume = 0.5;
 
   themeSwitch.addEventListener('click', handleSwitch);
-
 })(window, document);

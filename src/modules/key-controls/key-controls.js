@@ -1,6 +1,5 @@
 (function(document, window) {
   'use strict';
-
   const body = document.querySelector('body');
   const KEY_J = document.querySelector('#key-j');
   const KEY_K = document.querySelector('#key-k');
@@ -34,5 +33,4 @@
 
   body.addEventListener('keyup', handleKeyup);
   body.addEventListener('keydown', handleKeydown);
-
 })(document, window);

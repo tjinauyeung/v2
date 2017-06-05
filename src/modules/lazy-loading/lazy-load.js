@@ -1,6 +1,5 @@
 (function initLazyLoadImages() {
   'use strict';
-
   let lazyNodelist = document.querySelectorAll('.lazy-load');
   let lazyArray = convertToArray(lazyNodelist);
 
@@ -14,7 +13,7 @@
   }
 
   function replaceAttributesIfInViewport() {
-    return lazyArray.forEach((image) => {
+    return lazyArray.forEach(image => {
       if (isInViewportAndHasSrcAttribute(image)) {
         replaceSrcAttributes(image);
         reveal(image, 500);
@@ -29,7 +28,7 @@
   }
 
   function reveal(el, delay) {
-    return setTimeout(() => el.style.opacity = 1, delay);
+    return setTimeout(() => (el.style.opacity = 1), delay);
   }
 
   function isInViewportAndHasSrcAttribute(el) {
@@ -40,7 +39,7 @@
     lazyArray = lazyArray.filter(image => image.hasAttribute('data-src'));
   }
 
-  function isInViewport(el){
+  function isInViewport(el) {
     const rect = el.getBoundingClientRect();
 
     return (
@@ -50,5 +49,4 @@
   }
 
   window.addEventListener('scroll', lazyLoad);
-
 })();

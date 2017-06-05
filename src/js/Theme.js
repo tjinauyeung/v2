@@ -27,7 +27,7 @@ class ThemeSwitch {
 
   toggleTheme() {
     if (this.theme === this.themeClasses[0]) {
-      return this.theme = this.themeClasses[1];
+      return (this.theme = this.themeClasses[1]);
     }
     this.theme = this.themeClasses[0];
   }
