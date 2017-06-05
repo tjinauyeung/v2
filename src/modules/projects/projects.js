@@ -1,6 +1,5 @@
 (function(window, document) {
   'use strict';
-
   const projects = document.querySelectorAll('.project');
   const projectPreview = document.querySelector('.project__preview');
 
@@ -10,5 +9,4 @@
   }
 
   projects.forEach(project => project.addEventListener('click', handlePreview));
-
 })(window, document);

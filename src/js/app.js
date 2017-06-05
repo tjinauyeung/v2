@@ -32,4 +32,3 @@ const App = () => {
 
 const app = App();
 app.init();
-
